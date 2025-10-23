@@ -50,7 +50,7 @@ def Submit(session: requests.Session, cookies_string: str, video_urls: str) -> b
         fields={
             "postlink": f"{video_urls}",
             "service": "6397",
-            "tiktokviewsQuantity": "100",
+            "tiktokviewsQuantity": "5000",
             "extended_user_agent": f"""Browser CodeName: Mozilla | 
                 Browser Name: Netscape | 
                 Browser Version: {session.headers['User-Agent'].replace('Mozilla/', '')} | 
@@ -155,4 +155,5 @@ if __name__ == '__main__':
     except Exception as e:
         Print(Panel(f"[bold red]{str(e).title()}!", style="bold bright_yellow", width=59, title="[bold bright_yellow]>> [Error] <<"))
     except KeyboardInterrupt:
+
         sys.exit()
